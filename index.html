@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redfield Industries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff4d00;
+            --secondary-color: #00ffff;
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            opacity: 0.8;
+            background-image:  linear-gradient(30deg, #4e1700 12%, transparent 12.5%, transparent 87%, #4e1700 87.5%, #4e1700), linear-gradient(150deg, #4e1700 12%, transparent 12.5%, transparent 87%, #4e1700 87.5%, #4e1700), linear-gradient(30deg, #4e1700 12%, transparent 12.5%, transparent 87%, #4e1700 87.5%, #4e1700), linear-gradient(150deg, #4e1700 12%, transparent 12.5%, transparent 87%, #4e1700 87.5%, #4e1700), linear-gradient(60deg, #4e170077 25%, transparent 25.5%, transparent 75%, #4e170077 75%, #4e170077), linear-gradient(60deg, #4e170077 25%, transparent 25.5%, transparent 75%, #4e170077 75%, #4e170077);
+            background-size: 20px 35px;
+            background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+        main {
+            padding: 4rem 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            min-height: calc(100vh - 60px);
+        }
+        section {
+            flex-basis: 48%;
+            margin-bottom: 2rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 77, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--primary-color);
+        }
+        section:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 0 30px rgba(255, 77, 0, 0.5);
+        }
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(255, 77, 0, 0.5);
+        }
+        h2 {
+            font-size: 2rem;
+            text-shadow: 1px 1px 2px rgba(255, 77, 0, 0.5);
+        }
+        p {
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        #home {
+            flex-basis: 100%;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        #home h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color);
+            }
+            to {
+                text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+            }
+        }
+        #home p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+            border-top: 1px solid var(--primary-color);
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            section {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Redfield Industries</h1>
+            <p>Pushing the boundaries of IT solutions. From cutting-edge troubleshooting to revolutionary community support, we're redefining the future of technology.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Redfield Industries, we forge innovative IT solutions for businesses and individuals alike. Our mission: to revolutionize the tech landscape with unparalleled expertise and visionary thinking.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Dive into our arsenal of IT services: state-of-the-art software tools, advanced troubleshooting guides, and cutting-edge educational resources designed to propel you into the future of technology.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to transform your tech experience? Connect with our elite support team or follow us on Twitter for real-time updates on the latest in IT innovation.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2021 Redfield Industries. Forging the future of IT.</p>
+    </footer>
+</body>
+</html>
